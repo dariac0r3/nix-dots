@@ -3,6 +3,7 @@
 {
 	imports = [
 		./modules/plasma.nix
+		./modules/xfce.nix
 		./modules/firefox.nix
 		./modules/bash.nix
 		./modules/alacritty.nix

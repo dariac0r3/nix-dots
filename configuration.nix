@@ -6,6 +6,8 @@
 			./hardware-configuration.nix
 			./modules/extra.nix
 			./modules/user.nix
+			./modules/deplasma.nix
+			./modules/dexfce.nix
 		];
 
 	  # Bootloader.
