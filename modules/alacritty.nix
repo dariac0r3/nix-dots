@@ -5,9 +5,12 @@
 		enable = true;
 		theme = "catppuccin_mocha";
 		settings = {
-			window.dimensions = {
-				columns = 100;
-				lines = 30;
+			window = {
+				dimensions = {
+					columns = 100;
+					lines = 30;
+				};
+				opacity = 0.95;
 			};
 		};
 	};
