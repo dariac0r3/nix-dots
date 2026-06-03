@@ -4,10 +4,12 @@
 	imports =
 		[ 
 			./hardware-configuration.nix
-			./modules/extra.nix
-			./modules/user.nix
-			./modules/deplasma.nix
-			./modules/dexfce.nix
+			./modules/graphics.nix
+			./modules/personal/packages.nix
+			./modules/personal/user.nix
+			./modules/desktop/plasma.nix
+#			./modules/desktop/xfce.nix
+#			./modules/desktop/niri.nix
 		];
 
 	  # Bootloader.
@@ -29,15 +31,6 @@
 		alsa.enable = true;
 		alsa.support32Bit = true;
 		pulse.enable = true;
-	};
-
-	  # graphic drivers
-	hardware.graphics = {
-		enable = true;
-		extraPackages = with pkgs; [
-			intel-vaapi-driver
-			intel-media-driver
-		];
 	};
 
 	  # Set your time zone and internationalisation settings

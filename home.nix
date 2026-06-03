@@ -2,11 +2,12 @@
 
 {
 	imports = [
-		./modules/plasma.nix
-		./modules/xfce.nix
-		./modules/firefox.nix
-		./modules/bash.nix
-		./modules/alacritty.nix
+		./modules/personal/firefox.nix
+		./modules/personal/bash.nix
+		./modules/personal/alacritty.nix
+		./modules/desktop/plasma-home.nix
+#		./modules/desktop/xfce-home.nix
+#		./modules/desktop/niri-home.nix
 	];
 	
 	home.username = "daria";
