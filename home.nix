@@ -5,7 +5,7 @@
 		./modules/personal/firefox.nix
 		./modules/personal/bash.nix
 		./modules/personal/alacritty.nix
-		./modules/desktop/plasma-home.nix
+#		./modules/desktop/plasma-home.nix
 #		./modules/desktop/xfce-home.nix
 #		./modules/desktop/niri-home.nix
 	];
@@ -19,6 +19,5 @@
 		discord
 		amberol
 		vlc
-		prismlauncher
 	];
 }
