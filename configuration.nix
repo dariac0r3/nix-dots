@@ -7,7 +7,7 @@
 			./modules/graphics.nix
 			./modules/personal/packages.nix
 			./modules/personal/user.nix
-			./modules/desktop/plasma.nix
+#			./modules/desktop/plasma.nix
 #			./modules/desktop/xfce.nix
 #			./modules/desktop/niri.nix
 		];
