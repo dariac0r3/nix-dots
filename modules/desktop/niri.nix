@@ -13,4 +13,6 @@
 		catppuccin-cursors.mochaMauve
 	];
 	systemd.user.services.niri.enableDefaultPath = false;
+	services.power-profiles-daemon.enable = true;
+	services.upower.enable = true;
 }

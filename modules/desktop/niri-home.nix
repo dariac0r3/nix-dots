@@ -2,7 +2,7 @@
 
 {
 	home.file.".config/niri/config.kdl" = { source = ./config.kdl; };
-	home.packages = [pkgs.catppuccin-cursors.mochaMauve pkgs.fuzzel pkgs.swaybg pkgs.nerd-fonts.martian-mono pkgs.xwayland-satellite pkgs.xwayland-run];
+	home.packages = [pkgs.catppuccin-cursors.mochaMauve pkgs.fuzzel pkgs.xwayland-satellite pkgs.xwayland-run];
 
 	programs.fuzzel.enable = true;
 	programs.fuzzel.settings = {
