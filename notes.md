@@ -4,6 +4,12 @@ This config is by no means comprehensive, it's very much unreadable. I tried to 
 
 The code is self-documenting, and needs no comments /j
 
+
+
+BEFORE YOU EVEN APPLY THE CONFIGS:
+change the username everywhere in home.nix and flake.nix to whatever you set your username to otherwise it wont work.
+also change the hostname in configuration.nix to make it work before applying anything.
+
 Notes for the different configs:
 1. Plasma
    - This is almost as default as you could go, but beware, you need to install Papirus Icons to make it work.
