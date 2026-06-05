@@ -8,6 +8,7 @@
 #		./modules/desktop/plasma-home.nix
 #		./modules/desktop/xfce-home.nix
 #		./modules/desktop/niri-home.nix
+#		./modules/desktop/noctalia.nix
 	];
 	
 	home.username = "daria";
