@@ -4,8 +4,8 @@
 ## quick preview of each configuration:
 
 ### KDE Plasma
-
+![Screenshot of kde plasma desktop.](/assets/images/plasma.png)
 ### XFCE
-
+![Screenshot of the xfce desktop.](/assets/images/xfce.png)
 ### Niri with Noctalia quickshell
 ![Screenshot of the niri desktop.](/assets/images/niri.png)
