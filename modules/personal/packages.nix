@@ -15,5 +15,7 @@
 		git
 		alacritty
 		(olympus.override { celesteWrapper = "steam-run"; })
+		krita
+		kdenlive
 	];
 }
