@@ -59,7 +59,7 @@
 			colorSchemes.predefinedScheme = "Catppuccin";
 			location = {
 				monthBeforeDay = false;
-				name = "Olsztyn, Poland";
+				name = "Warsaw, Poland";
 			};
 			dock = {
 				enabled = false;
