@@ -17,5 +17,7 @@
 		(olympus.override { celesteWrapper = "steam-run"; })
 		krita
 		kdePackages.kdenlive
+		glib
+		gsettings-desktop-schemas
 	];
 }
