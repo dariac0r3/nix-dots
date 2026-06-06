@@ -6,8 +6,8 @@
 		shellAliases = {
 			btw = "echo 'i use NixOS btw' && hyfetch";
 			nrs = "sudo nixos-rebuild switch";
-			nfu = "sudo nixos flake update --flake /etc/nixos/";
-			upgrade = "sudo nixos flake update --flake /etc/nixos/ && sudo nixos-rebuild switch";
+			nfu = "sudo nix flake update --flake /etc/nixos/";
+			upgrade = "sudo nix flake update --flake /etc/nixos/ && sudo nixos-rebuild switch";
 			nixedit = "sudo vim /etc/nixos/configuration.nix";
 			flakeedit = "sudo vim /etc/nixos/flake.nix";
 			homeedit = "sudo vim /etc/nixos/home.nix";
