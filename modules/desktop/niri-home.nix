@@ -47,5 +47,19 @@
 			name = "catppuccin-mocha-mauve-cursors";
 			package = pkgs.catppuccin-cursors.mochaMauve;
 		};
+		iconTheme = {
+			name = "Papirus-Dark";
+			package = pkgs.catppuccin-papirus-folders.override {
+				flavor = "mocha";
+				accent = "mauve";
+			};
+		};
+	};
+	
+	dconf.enable = true;
+	dconf.settings = {
+		"org/gnome/desktop/interface" = {
+			icon-theme = "Papirus-Dark";
+		};
 	};
 }

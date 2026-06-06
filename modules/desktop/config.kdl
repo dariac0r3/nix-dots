@@ -38,8 +38,8 @@ input {
         // middle-emulation
     }
 }
-/-output "eDP-1" {
-    mode "1920x1080@120.030"
+output "eDP-1" {
+    mode "1920x1080@60"
     scale 1
     transform "normal"
     position x=1280 y=0
@@ -96,6 +96,26 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
 }
 
+ // window rules
+
+window-rule {
+    match app-id="^Alacritty$"
+    open-floating true
+    draw-border-with-background false
+    opacity 0.9
+}
+
+window-rule {
+    match app-id="^firefox$"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="top-right"
+}
+
+
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
@@ -139,8 +159,8 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
 
     Mod+O repeat=false { toggle-overview; }
     Mod+Space repeat=false { toggle-overview; }

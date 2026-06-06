@@ -33,6 +33,9 @@
 						{
 						id = "Bluetooth";
 						}
+						{
+						id = "Tray";
+						}
 					];
 					center = [
 						{
@@ -42,6 +45,12 @@
 						}
 					];
 					right = [
+					{
+					id = "Volume";
+					}
+					{
+					id = "Brightness";
+					}
 					{
 					alwaysShowPercentage = true;
 					id = "Battery";
