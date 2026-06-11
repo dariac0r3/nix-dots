@@ -1,9 +1,10 @@
 { pkgs, inputs, ... }:
 
 {
-	imports = [
-		inputs.noctalia.homeModules.default
-	];
+		imports = [
+			inputs.noctalia.homeModules.default
+		];
+
 
 	home.file.".cache/noctalia/wallpapers.json" = {
 		text = builtins.toJSON {
@@ -14,12 +15,13 @@
 		};
 	};
 
-	programs.noctalia = {
+	programs.noctalia-shell = {
 		enable = true;
 		settings = {
 			bar = {
 				density = "compact";
 				position = "top";
+				placement = "attached";
 				showCapsule = false;
 				widgets = {
 					left = [
@@ -68,7 +70,7 @@
 			colorSchemes.predefinedScheme = "Catppuccin";
 			location = {
 				monthBeforeDay = false;
-				name = "Warsaw, Poland";
+				name = "Olsztyn, Poland";
 			};
 			dock = {
 				enabled = false;

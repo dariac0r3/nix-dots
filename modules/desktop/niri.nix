@@ -18,5 +18,6 @@
 		libarchive
 		loupe
 		kdePackages.kate
+		xdg-desktop-portal-wlr
 	];
 }

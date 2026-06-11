@@ -43,6 +43,8 @@
 
 		x11.enable = true;
 	};
+		
+	catppuccin.firefox.enable = false;
 	
 	gtk = {
 		enable = true;
@@ -87,16 +89,17 @@
 	##	 ̄ \_(ツ)_/ ̄
 
 	programs.niri = {
-
 		enable = true;
-
 		settings = {
-
 			input = {
+				focus-follows-mouse = {
+					enable = true;
+					max-scroll-amount = "0%";
+				};
+	
 				keyboard.xkb = {
 					layout = "pl";
 				};
-
 				touchpad = {
 					tap = true;
 					natural-scroll = false;
@@ -108,57 +111,47 @@
 		### This is for my laptop display specifically,
 		### your config may be different so comment this section out from 
 		### // here to-
+
 			outputs."eDP-1" = {
 				mode = {
 					width = 1920;
 					height = 1080;
 					refresh = 60.0;
 				};
-				
 				scale = 1.0;
-
 				position = {
 					x = 1280;
 					y = 0;
 				};
-
 				variable-refresh-rate = true;
 			};
 		### // -to here.
 			layout = {
 				gaps = 12;
-
 				center-focused-column = "never";
-
 				preset-column-widths = [
 					{ proportion = 0.33333; }
 					{ proportion = 0.5; }
 					{ proportion = 0.66667; }
 				];
-
 				default-column-width = { proportion = 0.66667; };
-
 				focus-ring = {
 					enable = true;
 					width = 4;
-
 					active.gradient = {
 						from = "#f5bde6";
 						to = "#c6a0f6";
 						angle = 45;
 					};
-
 					inactive.gradient = {
 						from = "#6e738d";
 						to = "#24273a";
 						angle = 45;
 					};
 				};
-
 				border = {
 					enable = false;
 				};
-
 				shadow = {
 					enable = true;
 					softness = 30;
@@ -169,25 +162,19 @@
 					};
 					color = "#0007";
 				};
-
 				struts = {};
 			};
-
 			cursor = {
 				theme = "catppuccin-mocha-mauve-cursors";
 				size = 24;
 			};
-
 			hotkey-overlay = {
 				skip-at-startup = true;
 			};
-
 			spawn-at-startup = [
 				{ command = [ "noctalia-shell" ]; }
 			];
-
 			screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
-
 			animations = {
 				enable = true;
 			};
@@ -205,7 +192,6 @@
 					draw-border-with-background = false;
 					opacity = 0.9;
 				}
-
 				{
 					matches = [
 						{
@@ -219,7 +205,6 @@
 						relative-to = "top-right";
 					};
 				}
-
 				{
 					matches = [
 						{
@@ -228,7 +213,6 @@
 					];
 					open-maximized = true;
 				}
-
 				{
 					geometry-corner-radius = {
 						top-left = 12.0;
@@ -248,6 +232,7 @@
 				"Mod+W".action.spawn = "firefox";
 				"Mod+N".action.spawn = "nautilus";
 				"Mod+Q".action.close-window = {};
+
 				"XF86AudioRaiseVolume".action.spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0";
 				"XF86AudioLowerVolume".action.spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 1.0";
 				"XF86AudioMute".action.spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
@@ -256,8 +241,8 @@
 				"XF86AudioStop".action.spawn-sh = "playerctl stop";
 				"XF86AudioPrev".action.spawn-sh = "playerctl previous";
 				"XF86AudioNext".action.spawn-sh = "playerctl next";
-				"XF86MonBrightnessUp".action.spawn-sh = "brightnessctl --class=backlight set 5%+";
-				"XF86MonBrightnessDown".action.spawn-sh = "brightnessctl --class=baclight set 5%-";
+				"XF86MonBrightnessUp" = { action.spawn-sh = "brightnessctl --class=backlight set +5%"; };
+				"XF86MonBrightnessDown" = { action.spawn-sh = "brightnessctl --class=backlight set 5%-"; };
 				"Mod+O".action.toggle-overview = {};
 				"Mod+Space".action.toggle-overview = {};
                                 "Mod+1".action.focus-workspace = 1;
@@ -300,9 +285,13 @@
 				"Mod+Shift+R".action.switch-preset-column-width-back = {};
 				"Mod+Ctrl+Shift+R".action.switch-preset-window-height = {};
 				"Mod+Ctrl+R".action.reset-window-height = {};
-				
+
+				"Mod+Shift+WheelScrollDown".action.focus-column-right = {};
+				"Mod+Shift+WheelScrollUp".action.focus-column-left = {};
 				"Mod+Ctrl+WheelScrollRight".action.move-column-right = {};
 				"Mod+Ctrl+WheelScrollLeft".action.move-column-left = {};
+				"Mod+Ctrl+Shift+WheelScrollDown".action.move-column-right = {};
+				"Mod+Ctrl+Shift+WheelScrollUp".action.move-column-left = {};
 
 				"Mod+Escape".action.toggle-keyboard-shortcuts-inhibit = {};
 				"Mod+Shift+E".action.quit = {};
