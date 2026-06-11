@@ -10,9 +10,7 @@
 	
 	programs.fuzzel = {
 		enable = true;
-
 		settings = {
-
 			main = {
 				terminal = "${pkgs.alacritty}/bin/alacritty";
 				layer = "overlay";
@@ -36,21 +34,25 @@
 
 	home.pointerCursor = {
 		gtk.enable = true;
-
 		package = pkgs.catppuccin-cursors.mochaMauve;
 		name = "catppuccin-mocha-mauve-cursors";
 		size = 24;
-
 		x11.enable = true;
 	};
 		
-	catppuccin.firefox.enable = false;
+	catppuccin = {
+		enable = true;
+		autoEnable = true;
+		firefox.enable = false;
+		
+	};
 	
 	gtk = {
 		enable = true;
+		gtk4.theme = config.gtk.theme;
+
 		theme = {
 			name = "catppuccin-mocha-mauve-standard";
-
 			package = (pkgs.catppuccin-gtk.override 
 				{ 
 					variant = "mocha";
@@ -63,26 +65,7 @@
 			name = "catppuccin-mocha-mauve-cursors";
 			package = pkgs.catppuccin-cursors.mochaMauve;
 		};
-	
-		iconTheme = {
-			name = "Papirus-Dark";
-			package = pkgs.catppuccin-papirus-folders.override {
-				flavor = "mocha";
-				accent = "mauve";
-			};
-		};
 	};
-	
-	dconf = {
-		enable = true;
-
-		settings = {
-			"org/gnome/desktop/interface" = {
-				icon-theme = "Papirus-Dark";
-			};
-		};
-	};
-
 
 	## Niri home-manager config goes here...
 
