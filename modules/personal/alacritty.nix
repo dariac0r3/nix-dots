@@ -13,6 +13,9 @@
 				decorations = "none";
 				padding = { x=2; y=2; };
 			};
+			cursor.style = {
+				shape = "Underline";
+			};
 		};
 	};
 }

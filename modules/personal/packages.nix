@@ -19,5 +19,7 @@
 		kdePackages.kdenlive
 		glib
 		gsettings-desktop-schemas
+		jq
+		obs-studio
 	];
 }
