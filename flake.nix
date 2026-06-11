@@ -7,21 +7,16 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		plasma-manager = {
-			url = "github:nix-community/plasma-manager";
-			inputs.nixpkgs.follows = "nixpkgs";
-			inputs.home-manager.follows = "home-manager";
-		};
 		niri.url = "github:sodiboo/niri-flake";
 		catppuccin.url = "github:catppuccin/nix";
 		noctalia = {
-			url = "github:noctalia-dev/noctalia-shell";
+			url = "github:noctalia-dev/noctalia-shell/v4.7.7";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
 
-	outputs = { nixpkgs, home-manager, plasma-manager,niri,catppuccin,noctalia,  ... }@inputs: {
-		nixosConfigurations.nix-btw = nixpkgs.lib.nixosSystem {
+	outputs = { nixpkgs, home-manager, niri, catppuccin,  ... }@inputs: {
+		nixosConfigurations.nix = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			specialArgs = { inherit inputs; };
 
@@ -35,9 +30,9 @@
 						useUserPackages = true;
 						users.daria.imports = [ ./home.nix
 									catppuccin.homeModules.catppuccin
+									niri.homeModules.niri
 						];
 						backupFileExtension = "backup";
-						sharedModules = [ plasma-manager.homeModules.plasma-manager ];
 						extraSpecialArgs = { inherit inputs; };
 					};
 				}
